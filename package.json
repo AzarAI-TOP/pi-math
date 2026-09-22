@@ -1,6 +1,6 @@
 {
   "name": "@azarai/pi-math",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Render LaTeX math as inline images in the pi chat transcript. Lightweight (python3 + matplotlib), theme-adaptive colors.",
   "keywords": [
     "pi-package",
@@ -24,7 +24,9 @@
   },
   "type": "module",
   "pi": {
-    "extensions": ["./extensions"]
+    "extensions": [
+      "./extensions"
+    ]
   },
   "files": [
     "extensions",
