@@ -1,7 +1,7 @@
 {
   "name": "@azarai/pi-math",
-  "version": "0.1.1",
-  "description": "Render LaTeX math as inline images in the pi chat transcript. Lightweight (python3 + matplotlib), theme-adaptive colors.",
+  "version": "0.2.0",
+  "description": "Render LaTeX math as inline images in the pi chat transcript. Lightweight (python3 + matplotlib), theme-adaptive colors, clean in-flow rendering.",
   "keywords": [
     "pi-package",
     "pi-coding-agent",
@@ -39,14 +39,19 @@
   },
   "devDependencies": {
     "@earendil-works/pi-coding-agent": ">=0.87.0",
+    "@earendil-works/pi-tui": ">=0.87.0",
     "@types/node": "*",
     "typebox": "1.3.27",
     "typescript": "^5.5.0"
   },
   "peerDependencies": {
+    "@earendil-works/pi-tui": "*",
     "typebox": "*"
   },
   "peerDependenciesMeta": {
+    "@earendil-works/pi-tui": {
+      "optional": true
+    },
     "typebox": {
       "optional": true
     }

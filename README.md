@@ -11,14 +11,18 @@ theme automatically.
 
 ## Features
 
-- **Inline rendering** — formulas appear in the chat via the Kitty graphics
-  protocol (and equivalents), as part of the `math` tool result block
+- **In-flow rendering** — the tool registers custom `renderCall`/`renderResult`
+  renderers and a `renderShell: "self"` shell (pi's `ToolDefinition` rendering
+  contract), so no args JSON or tool frame clutters the transcript: you get one
+  line of LaTeX source and the formula image directly beneath it, exactly where
+  the formula belongs in the conversation
+- **Model-invoked by design** — the tool's `promptGuidelines` instruct the
+  model to call `math` whenever its reply contains a formula worth showing,
+  instead of pasting raw LaTeX into the message
 - **Theme-adaptive color** — matches your terminal's foreground color via
   kitty remote control; falls back to a `COLORFGBG` heuristic, then white
 - **Lightweight** — no LaTeX installation: rendering uses matplotlib's
   mathtext engine (a large subset of LaTeX math) through system `python3`
-- **Model-invoked** — ask *"show me this formula"* in natural language and
-  the model typesets it
 
 ## Install
 
